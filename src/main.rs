@@ -6,8 +6,34 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
-    let rnd_num: i32 = rand::thread_rng().gen_range(1..4);
-    match rnd_num {
-        1 => println!("You rolled a {}", rnd_num)
+    
+    let mut str1 = String::new();
+
+    str1.push('A');
+    str1.push_str(" is a very important letter."); 
+
+    for words in str1.split_whitespace() {
+        println!("{}", words);
+    }
+
+    endloop();
+}
+
+
+
+
+
+fn endloop() {
+    let mut ynans = String::new();
+    println!("Do you want to try again?");
+    io::stdin().read_line(&mut ynans);
+
+    if ynans.to_lowercase().trim() == "yes" {
+    main();
+    }else if ynans.to_lowercase().trim() == "no" {
+        println!("Goodbye!");
+    } else  {
+        print!("Invalid input");
+        endloop();
     }
 }
