@@ -16,6 +16,8 @@ fn main() {
         println!("{}", words);
     }
 
+    println!("Thats crazy bro");
+
     endloop();
 }
 
