@@ -6,16 +6,13 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
-    
-    let mut str1 = String::new();
-
-    str1.push('A');
-    str1.push_str(" is a very important letter."); 
-
-    for words in str1.split_whitespace() {
-        println!("{}", words.replace('A', "Aloha"));
+    let str = String::from("a s w q d f g j u t f v n m j k u i o p l");
+    let mut v1: Vec<char> = str.chars().collect();
+    v1.sort();
+    v1.dedup();
+    for char in v1 {
+        println!("{}", char)
     }
-
     endloop();
 }
 
