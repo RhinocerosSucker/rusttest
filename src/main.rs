@@ -13,10 +13,8 @@ fn main() {
     str1.push_str(" is a very important letter."); 
 
     for words in str1.split_whitespace() {
-        println!("{}", words);
+        println!("{}", words.replace('A', "Aloha"));
     }
-
-    println!("Thats crazy bro");
 
     endloop();
 }
